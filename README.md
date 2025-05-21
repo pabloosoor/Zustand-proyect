@@ -1,54 +1,114 @@
-# React + TypeScript + Vite
+# 📝 Zustand Proyect - Gestor de Tareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/user-attachments/assets/aea3dd1c-9372-4d3c-9807-81c4b51d837e)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+¡Bienvenido/a! Este es un gestor de tareas moderno construido con **React**, **Zustand** para el manejo de estado global, y un backend simulado con **json-server**. El diseño es atractivo, responsivo y pensado para una experiencia de usuario agradable.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Características principales
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **CRUD de tareas**: Crea, edita, elimina y visualiza tareas fácilmente.
+- **Estado global con Zustand**: Gestión eficiente y sencilla del estado de la aplicación.
+- **Backend simulado**: Utiliza `json-server` para simular una API REST.
+- **Interfaz moderna**: Estilos personalizados, animaciones y experiencia visual mejorada.
+- **Notificaciones**: Feedback visual con SweetAlert2 para acciones exitosas o errores.
+- **Código comentado y organizado**: Fácil de entender y mantener.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🖥️ Vista previa
+
+![Captura de pantalla 2025-05-20 234740](https://github.com/user-attachments/assets/0299999d-667c-4a93-8b01-aebcb77fbd2d)
+
+![Captura de pantalla 2025-05-20 234753](https://github.com/user-attachments/assets/a1012b42-87d0-4f30-94dc-8f1bab627e65)
+---
+
+
+## ⚙️ Instalación y uso
+
+1. **Clona el repositorio**
+   ```bash
+   git clone https://github.com/tu-usuario/zustand-proyect.git
+   cd zustand-proyect
+   ```
+
+2. **Instala las dependencias**
+   ```bash
+   npm install
+   ```
+
+3. **Inicia el backend simulado**
+   ```bash
+   npm run server
+   ```
+   Esto levantará `json-server` en [http://localhost:3001](http://localhost:3001).
+
+4. **Inicia la aplicación React**
+   ```bash
+   npm run dev
+   ```
+   La app estará disponible en [http://localhost:5173](http://localhost:5173) (o el puerto que indique Vite).
+
+---
+
+## 🗂️ Estructura del proyecto
+
+src/
+│
+├── components/
+│ ├── ui/
+│ │ ├── header/
+│ │ │ ├── Modal/
+│ │ │ ├── CardList/
+│ │ │ ├── ListTareas/
+│ │ │ └── Header/
+│ └── screen/
+│
+├── hooks/
+│ └── useTareas.tsx
+├── http/
+│ └── tareas.ts
+├── store/
+│ └── tareaStore.ts
+├── type/
+│ └── Itareas.ts
+└── db.json
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **React 19**
+- **Zustand** (estado global)
+- **TypeScript**
+- **Vite** (entorno de desarrollo)
+- **json-server** (API REST fake)
+- **Axios** (peticiones HTTP)
+- **SweetAlert2** (notificaciones)
+- **CSS Modules** (estilos por componente)
+
+---
+
+## 📦 Scripts útiles
+
+| Comando           | Descripción                                 |
+|-------------------|---------------------------------------------|
+| `npm run dev`     | Inicia la app en modo desarrollo            |
+| `npm run build`   | Compila la app para producción              |
+| `npm run preview` | Previsualiza la app compilada               |
+| `npm run server`  | Levanta el backend simulado (json-server)   |
+| `npm run lint`    | Ejecuta el linter                           |
+
+---
+
+## 💡 Notas
+
+- Asegúrate de tener corriendo el backend (`npm run server`) antes de usar la app.
+- El archivo `db.json` es la base de datos simulada. Puedes editarlo manualmente si lo deseas.
+- El proyecto está comentado por segmentos para facilitar el aprendizaje y la colaboración.
+
+---
+
