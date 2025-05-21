@@ -1,0 +1,22 @@
+{
+  "tareas": [
+    {
+      "id": "4",
+      "titulo": "tarea nueva",
+      "descripcion": "tarea descripcion nueva",
+      "fechaLimite": "2025-05-19"
+    },
+    {
+      "id": "5",
+      "titulo": "perro paseo",
+      "descripcion": "Pasear a nala",
+      "fechaLimite": "2025-05-22"
+    },
+    {
+      "id": "6",
+      "titulo": "Comprar Comida",
+      "descripcion": "Ir al supermercado a comprar comida",
+      "fechaLimite": "2025-05-21"
+    }
+  ]
+}
